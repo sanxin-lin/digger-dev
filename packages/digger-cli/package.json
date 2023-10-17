@@ -1,0 +1,97 @@
+{
+  "name": "@digger/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "cli of digger",
+  "bin": {
+    "digger-cli": "./lib/node/bin.js"
+  },
+  "main": "./lib/node/index.js",
+  "module": "./lib/node/index.js",
+  "keywords": [
+    "cli",
+    "digger"
+  ],
+  "author": "sunshine_lin",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "client.js",
+    "client.d.ts",
+    "template",
+    "site",
+    "tsconfig.json",
+    "preset.cjs"
+  ],
+  "engines": {
+    "node": "^14.18.0 || >=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diggerjs/digger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diggerjs/digger/issues"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "rimraf ./lib && tsc"
+  },
+  "dependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@vitejs/plugin-vue": "4.2.3",
+    "@vitejs/plugin-vue-jsx": "3.0.1",
+    "@vue/babel-plugin-jsx": "1.1.4",
+    "@vue/compiler-sfc": "3.3.4",
+    "@vue/runtime-core": "3.3.4",
+    "esbuild": "0.19.3",
+    "vitest": "0.34.3",
+    "chokidar": "^3.5.2",
+    "commander": "^8.3.0",
+    "conventional-changelog": "^3.1.25",
+    "ejs": "^3.1.8",
+    "execa": "^5.0.0",
+    "fs-extra": "^9.0.1",
+    "glob": "^7.2.0",
+    "hash-sum": "^2.0.0",
+    "inquirer": "^9.1.4",
+    "less": "^3.12.2",
+    "lodash-es": "^4.17.21",
+    "markdown-it": "^12.2.3",
+    "nanospinner": "^1.1.0",
+    "picocolors": "^1.0.0",
+    "semver": "^7.3.5",
+    "slash": "^3.0.0",
+    "typescript": "^5.1.5",
+    "vite": "4.3.5",
+    "vue": "3.3.4",
+    "webfont": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/babel__core": "^7.20.1",
+    "@types/ejs": "^3.1.1",
+    "@types/fs-extra": "^9.0.2",
+    "@types/glob": "^7.1.3",
+    "@types/hash-sum": "^1.0.0",
+    "@types/inquirer": "^9.0.2",
+    "@types/lodash-es": "^4.17.5",
+    "@types/markdown-it": "^12.2.3",
+    "@types/node": "^18.7.20",
+    "@types/semver": "^7.3.9",
+    "@types/sharp": "0.31.1",
+    "rimraf": "^5.0.1"
+  },
+  "peerDependencies": {
+    "@vue/runtime-core": "3.3.4",
+    "@vue/test-utils": "2.4.1",
+    "@vitest/coverage-istanbul": "0.34.3",
+    "vitest": "0.34.3",
+    "jsdom": "22.1.0",
+    "clipboard": "^2.0.6",
+    "live-server": "^1.2.1",
+    "lodash-es": "^4.17.21",
+    "vue": "3.3.4",
+    "vue-router": "4.2.0"
+  }
+}

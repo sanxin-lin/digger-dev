@@ -1,0 +1,31 @@
+{
+  "name": "@digger/icons",
+  "version": "1.0.0",
+  "description": "Icons of digger",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "keywords": [
+    "icons",
+    "svg",
+    "digger"
+  ],
+  "author": "sunshine_linr",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "scripts": {
+    "build": "digger-cli build:icons"
+  },
+  "devDependencies": {
+    "@digger/cli": "workspace:*"
+  }
+}
