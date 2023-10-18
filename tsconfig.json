@@ -1,26 +1,16 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "module": "esnext",
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "moduleResolution": "node",
-    "esModuleInterop": true,
+    "target": "es2016",
     "strict": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
     "declaration": true,
-    "resolveJsonModule": true,
-    "rootDir": ".",
-    "baseUrl": ".",
-    "jsx": "preserve",
     "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "noUnusedLocals": true,
-    "importHelpers": true,
-    "types": ["node", "vitest", "vitest/globals"],
-    "paths": {
-      "tslib": ["path/to/node_modules/tslib/tslib.d.ts"]
-    }
-  },
-  "exclude": ["node_modules", "commitlint.config.js"]
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "lib": ["esnext", "dom"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "outDir": "./lib"
+  }
 }

@@ -1,1 +1,3 @@
-export const dev = async () => {};
+export const dev = async (options: any) => {
+  console.log(options);
+};
