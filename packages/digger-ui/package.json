@@ -1,0 +1,83 @@
+{
+  "name": "@digger/ui",
+  "version": "1.0.0",
+  "description": "A material like components library",
+  "main": "lib/digger.cjs.js",
+  "module": "es/index.mjs",
+  "typings": "types/index.d.ts",
+  "style": "umd/style.css",
+  "unpkg": "umd/digger.js",
+  "jsdelivr": "umd/digger.js",
+  "web-types": "highlight/web-types.en-US.json",
+  "keywords": [
+    "Vue3",
+    "Mobile",
+    "Material Design",
+    "UI",
+    "Components"
+  ],
+  "files": [
+    "json",
+    "lib",
+    "es",
+    "umd",
+    "highlight",
+    "types"
+  ],
+  "author": "sunshine_lin",
+  "license": "MIT",
+  "homepage": "https://digger.gitee.io/digger-ui/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diggerjs/digger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diggerjs/digger/issues"
+  },
+  "sideEffects": [
+    "es/**/style/*",
+    "lib/**/style/*",
+    "es/style.mjs",
+    "lib/style.js",
+    "*.css"
+  ],
+  "scripts": {
+    "dev": "digger-cli dev",
+    "build": "digger-cli build",
+    "preview": "digger-cli preview",
+    "compile": "digger-cli compile",
+    "create": "digger-cli create",
+    "test": "digger-cli test",
+    "test:watch": "digger-cli test -w",
+    "test:coverage": "digger-cli test -cov"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "@digger/icons": "workspace:*",
+    "@digger/shared": "workspace:*",
+    "@digger/use": "workspace:*",
+    "dayjs": "^1.10.4",
+    "decimal.js": "^10.2.1"
+  },
+  "devDependencies": {
+    "@digger/cli": "workspace:*",
+    "@digger/ui": "workspace: *",
+    "@digger/touch-emulator": "workspace:*",
+    "@vue/runtime-core": "3.3.4",
+    "@vue/test-utils": "2.4.1",
+    "@types/lodash-es": "^4.17.6",
+    "@types/node": "^18.7.18",
+    "@vitest/coverage-istanbul": "0.34.3",
+    "jsdom": "22.1.0",
+    "vitest": "0.34.3",
+    "clipboard": "^2.0.6",
+    "live-server": "^1.2.1",
+    "lodash-es": "^4.17.21",
+    "typescript": "^5.1.5",
+    "vue": "3.3.4",
+    "vue-router": "4.2.0"
+  }
+}
