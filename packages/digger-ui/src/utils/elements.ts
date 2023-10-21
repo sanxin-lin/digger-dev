@@ -81,3 +81,15 @@ export const toSizeUnit = (value: unknown) => {
 
   return `${toPxNum(value)}px`;
 };
+
+export const multiplySizeUnit = (value: unknown, quantity = 1) => {
+  if (value == null) {
+    return undefined;
+  }
+
+  const legalSize = toSizeUnit(value) as string;
+
+  const unit = legalSize.match(/(vh|%|r?em|px|vw|vmin|vmax)$/)![0];
+
+  return `${parseFloat(legalSize) * quantity}${unit}`;
+};

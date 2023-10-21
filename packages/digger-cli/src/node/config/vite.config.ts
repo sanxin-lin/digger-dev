@@ -80,3 +80,82 @@ export const getBuildConfig = (diggerConfig: Required<DiggerConfig>): InlineConf
     },
   };
 };
+
+export interface BundleBuildOptions {
+  fileName: string;
+  output: string;
+  format: 'es' | 'cjs' | 'umd';
+  removeEnv: boolean;
+  emptyOutDir: boolean;
+}
+
+export const getBundleConfig = (
+  diggerConfig: Required<DiggerConfig>,
+  buildOptions: BundleBuildOptions,
+): InlineConfig => {
+  const plugins = [];
+  const name = get(diggerConfig, 'name');
+  const { fileName, output, format, emptyOutDir, removeEnv } = buildOptions;
+
+  if (format === 'umd') {
+    plugins.push(
+      inlineCss({
+        jsFile: resolve(output, fileName),
+        cssFile: resolve(output, 'style.css'),
+      }),
+    );
+  }
+
+  return {
+    logLevel: 'silent',
+    define: removeEnv
+      ? {
+          'process.env.NODE_ENV': JSON.stringify('production'),
+        }
+      : undefined,
+    plugins,
+    build: {
+      minify: format === 'cjs' ? false : 'esbuild',
+      emptyOutDir,
+      copyPublicDir: false,
+      lib: {
+        name,
+        formats: [format],
+        fileName: () => fileName,
+        entry: resolve(ES_DIR, 'index.bundle.mjs'),
+      },
+      rollupOptions: {
+        external: ['vue'],
+        output: {
+          dir: output,
+          exports: 'named',
+          globals: {
+            vue: 'Vue',
+          },
+        },
+      },
+    },
+  };
+};
+
+export type ExtensionMode = 'dev' | 'build';
+
+export function getExtensionConfig(mode: ExtensionMode): InlineConfig {
+  return {
+    build: {
+      sourcemap: mode === 'dev' ? 'inline' : false,
+
+      watch: mode === 'dev' ? {} : null,
+
+      lib: {
+        entry: EXTENSION_ENTRY,
+        fileName: 'extension',
+        formats: ['cjs'],
+      },
+
+      rollupOptions: {
+        external: ['vscode'],
+      },
+    },
+  };
+}

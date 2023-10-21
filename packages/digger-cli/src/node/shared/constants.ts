@@ -11,6 +11,19 @@ export const SRC_DIR = resolve(CWD, 'src');
 
 export const CLI_PACKAGE_JSON = resolve(dirname, '../../../package.json');
 
+export const PUBLIC_DIR_INDEXES = ['index.vue', 'index.tsx', 'index.ts', 'index.jsx', 'index.js'];
+
+export const DOCS_DIR_NAME = 'docs';
+export const STYLE_DIR_NAME = 'style';
+export const EXAMPLE_DIR_NAME = 'example';
+export const LOCALE_DIR_NAME = 'locale';
+export const ROOT_DOCS_DIR = resolve(CWD, 'docs');
+export const ROOT_PAGES_DIR = resolve(CWD, 'pages');
+
+export const UI_PACKAGE_JSON = resolve(CWD, 'package.json');
+
+export const SCRIPTS_EXTENSIONS = ['.tsx', '.ts', '.jsx', '.js', '.mjs', '.cjs'];
+
 export const DIGGER_CONFIG = resolve(CWD, 'digger.config.mjs');
 
 export const VITE_RESOLVE_EXTENSIONS = [

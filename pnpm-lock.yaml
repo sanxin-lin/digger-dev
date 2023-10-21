@@ -142,7 +142,7 @@ importers:
         version: 4.3.5(@types/node@18.7.20)(less@3.12.2)
       vitest:
         specifier: 0.34.3
-        version: 0.34.3(less@3.12.2)
+        version: 0.34.3(jsdom@22.1.0)(less@3.12.2)
       vue:
         specifier: 3.3.4
         version: 3.3.4
@@ -276,7 +276,7 @@ importers:
         version: 5.2.2
       vitest:
         specifier: 0.34.3
-        version: 0.34.3(jsdom@22.1.0)
+        version: 0.34.3(jsdom@22.1.0)(less@3.12.2)
       vue:
         specifier: 3.3.4
         version: 3.3.4
@@ -1895,7 +1895,7 @@ packages:
       istanbul-lib-source-maps: 4.0.1
       istanbul-reports: 3.1.6
       test-exclude: 6.0.0
-      vitest: 0.34.3(jsdom@22.1.0)
+      vitest: 0.34.3(jsdom@22.1.0)(less@3.12.2)
     transitivePeerDependencies:
       - supports-color
 
@@ -7489,7 +7489,7 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
-  /vitest@0.34.3(jsdom@22.1.0):
+  /vitest@0.34.3(jsdom@22.1.0)(less@3.12.2):
     resolution: {integrity: sha512-7+VA5Iw4S3USYk+qwPxHl8plCMhA5rtfwMjgoQXMT7rO5ldWcdsdo3U1QD289JgglGK4WeOzgoLTsGFu6VISyQ==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -7552,70 +7552,6 @@ packages:
       - sugarss
       - supports-color
       - terser
-
-  /vitest@0.34.3(less@3.12.2):
-    resolution: {integrity: sha512-7+VA5Iw4S3USYk+qwPxHl8plCMhA5rtfwMjgoQXMT7rO5ldWcdsdo3U1QD289JgglGK4WeOzgoLTsGFu6VISyQ==}
-    engines: {node: '>=v14.18.0'}
-    hasBin: true
-    peerDependencies:
-      '@edge-runtime/vm': '*'
-      '@vitest/browser': '*'
-      '@vitest/ui': '*'
-      happy-dom: '*'
-      jsdom: '*'
-      playwright: '*'
-      safaridriver: '*'
-      webdriverio: '*'
-    peerDependenciesMeta:
-      '@edge-runtime/vm':
-        optional: true
-      '@vitest/browser':
-        optional: true
-      '@vitest/ui':
-        optional: true
-      happy-dom:
-        optional: true
-      jsdom:
-        optional: true
-      playwright:
-        optional: true
-      safaridriver:
-        optional: true
-      webdriverio:
-        optional: true
-    dependencies:
-      '@types/chai': 4.3.8
-      '@types/chai-subset': 1.3.3
-      '@types/node': 18.7.20
-      '@vitest/expect': 0.34.3
-      '@vitest/runner': 0.34.3
-      '@vitest/snapshot': 0.34.3
-      '@vitest/spy': 0.34.3
-      '@vitest/utils': 0.34.3
-      acorn: 8.10.0
-      acorn-walk: 8.2.0
-      cac: 6.7.14
-      chai: 4.3.10
-      debug: 4.3.4
-      local-pkg: 0.4.3
-      magic-string: 0.30.5
-      pathe: 1.1.1
-      picocolors: 1.0.0
-      std-env: 3.4.3
-      strip-literal: 1.3.0
-      tinybench: 2.5.1
-      tinypool: 0.7.0
-      vite: 4.3.5(@types/node@18.7.20)(less@3.12.2)
-      vite-node: 0.34.3(@types/node@18.7.20)(less@3.12.2)
-      why-is-node-running: 2.2.2
-    transitivePeerDependencies:
-      - less
-      - sass
-      - stylus
-      - sugarss
-      - supports-color
-      - terser
-    dev: false
 
   /vue-component-type-helpers@1.8.4:
     resolution: {integrity: sha512-6bnLkn8O0JJyiFSIF0EfCogzeqNXpnjJ0vW/SZzNHfe6sPx30lTtTXlE5TFs2qhJlAtDFybStVNpL73cPe3OMQ==}

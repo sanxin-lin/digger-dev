@@ -18,4 +18,11 @@ program
     const { icons } = await import('./commands/icons.js');
     return icons();
 });
+program
+    .command('build')
+    .description('Build digger site for production')
+    .action(async () => {
+    const { build } = await import('./commands/build.js');
+    return build();
+});
 program.parse();
